@@ -1,0 +1,1 @@
+select customer.CUS_GENDER,count(customer.CUS_GENDER) as COUNT from customer inner join `order` on customer.CUS_ID = `order`.CUS_ID where `order`.ORD_AMOUNT >= 3000 group by customer.CUS_GENDER;
